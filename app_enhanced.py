@@ -2294,18 +2294,18 @@ def show_feature_analysis():
             corr_matrix = corr_df[correlation_features].corr()
             
             # Create modern correlation heatmap
-            fig, ax = plt.subplots(figsize=(10, 8))
-            sns.set(font_scale=1.2)
+            fig, ax = plt.subplots(figsize=(12, 2))
+            sns.set(font_scale=0.6)
             heatmap = sns.heatmap(
                 corr_matrix, 
                 annot=True, 
                 cmap='coolwarm', 
                 fmt='.2f', 
                 ax=ax,
-                linewidths=0.5,
+                linewidths=0.3,
                 cbar_kws={"shrink": 0.8}
             )
-            plt.title('Feature Correlation Matrix', fontsize=20, pad=20)
+            plt.title('Feature Correlation Matrix', fontsize=15, pad=20)
             st.pyplot(fig)
     
     if st.session_state.model_trained:
