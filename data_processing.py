@@ -354,7 +354,7 @@ class HurricaneDataProcessor:
         self.features_df = result_df
         return result_df
     
-    def extract_features(self):
+    def extract_basic_features(self):
         """Extract basic features from hurricane trajectories"""
         if self.dataset is None:
             self.load_data()
